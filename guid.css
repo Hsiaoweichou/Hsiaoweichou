@@ -1,0 +1,389 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    width: 100px;
+}
+
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+[class^="col-"] {
+    width: 100%;
+    padding: 15px;
+}
+
+.col-1 {
+    width: calc(100px * 1 / 12);
+
+}
+
+.col-2 {
+    width: calc(100% * 2 / 12);
+}
+
+.col-3 {
+    width: calc(100% * 3 / 12);
+    flex-direction: column;
+}
+
+.col-4 {
+    width: calc(100% * 4 / 12);
+}
+
+.col-5 {
+    width: calc(100% * 5 / 12);
+
+}
+
+.col-6 {
+    width: calc(100% * 6 / 12);
+
+}
+
+.col-7 {
+    width: calc(100% * 7 /12);
+
+}
+
+.col-8 {
+    width: calc(100% * 8 / 12);
+
+}
+
+.col-9 {
+    width: calc(100% * 9 / 12);
+}
+
+.col-10 {
+    width: calc(100% * 10 / 12);
+}
+
+.col-11 {
+    width: calc (100px * 11 / 12);
+}
+
+.col-12 {
+    width: calc(100% * 12 /12);
+}
+
+
+/*小螢幕或更小手機 縮寫 xs*/
+@media screen and (max-width:575.98px) {
+    .container {
+        width: 100%;
+    }
+
+    .col-1 {
+        width: calc(100px * 1 / 12);
+
+    }
+
+    .col-2 {
+        width: calc(100% * 2 / 12);
+    }
+
+    .col-3 {
+        width: calc(100% * 3 / 12);
+        flex-direction: column;
+    }
+
+    .col-4 {
+        width: calc(100% * 4 / 12);
+    }
+
+    .col-5 {
+        width: calc(100% * 5 / 12);
+
+    }
+
+    .col-6 {
+        width: calc(100% * 6 / 12);
+
+    }
+
+    .col-7 {
+        width: calc(100% * 7 /12);
+
+    }
+
+    .col-8 {
+        width: calc(100% * 8 / 12);
+
+    }
+
+    .col-9 {
+        width: calc(100% * 9 / 12);
+    }
+
+    .col-10 {
+        width: calc(100% * 10 / 12);
+    }
+
+    .col-11 {
+        width: calc (100px * 11 / 12);
+    }
+
+    .col-12 {
+        width: calc(100% * 12 /12);
+    }
+}
+
+[class^="col-"] {
+    width="100%";
+}
+
+
+/*一般手機 縮寫 sm*/
+@media screen and (min-width:576px) and (max-width:767.98px) {
+    .container {
+        width: 540px;
+    }
+
+    .col-sm-1 {
+        width: calc(100px * 1 / 12);
+
+    }
+
+    .col-sm-2 {
+        width: calc(100% * 2 / 12);
+    }
+
+    .col-sm-3 {
+        width: calc(100% * 3 / 12);
+        flex-direction: column;
+    }
+
+    .col-sm-4 {
+        width: calc(100% * 4 / 12);
+    }
+
+    .col-sm-5 {
+        width: calc(100% * 5 / 12);
+
+    }
+
+    .col-sm-6 {
+        width: calc(100% * 6 / 12);
+
+    }
+
+    .co-sm-7 {
+        width: calc(100% * 7 /12);
+
+    }
+
+    .col-sm-8 {
+        width: calc(100% * 8 / 12);
+
+    }
+
+    .col-sm-9 {
+        width: calc(100% * 9 / 12);
+    }
+
+    .col-sm-10 {
+        width: calc(100% * 10 / 12);
+    }
+
+    .col-sm-11 {
+        width: calc (100px * 11 / 12);
+    }
+
+    .col-sm-12 {
+        width: calc(100% * 12 /12);
+    }
+}
+
+/*大螢幕手機 縮寫md*/
+@media screen and (min-width:768px) and (max-width:99.98px) {
+    .container {
+        width: 720px;
+    }
+
+    .col-md-1 {
+        width: calc(100px * 1 / 12);
+
+    }
+
+    .col-md-2 {
+        width: calc(100% * 2 / 12);
+    }
+
+    .col-md-3 {
+        width: calc(100% * 3 / 12);
+        flex-direction: column;
+    }
+
+    .col-4 {
+        width: calc(100% * 4 / 12);
+    }
+
+    .col-md-5 {
+        width: calc(100% * 5 / 12);
+
+    }
+
+    .col-md-6 {
+        width: calc(100% * 6 / 12);
+
+    }
+
+    .col-md-7 {
+        width: calc(100% * 7 /12);
+
+    }
+
+    .col-md-8 {
+        width: calc(100% * 8 / 12);
+
+    }
+
+    .col-md-9 {
+        width: calc(100% * 9 / 12);
+    }
+
+    .col-md-10 {
+        width: calc(100% * 10 / 12);
+    }
+
+    .col-md-11 {
+        width: calc (100px * 11 / 12);
+    }
+
+    .col-md-12 {
+        width: calc(100% * 12 /12);
+    }
+}
+
+
+/*平板電腦 縮寫lg*/
+@media screen and (min-width:992px) and (max-width:1199.98px) {
+    .container {
+        width: 960px;
+    }
+
+    .col-lg-1 {
+        width: calc(100px * 1 / 12);
+
+    }
+
+    .col-lg-2 {
+        width: calc(100% * 2 / 12);
+    }
+
+    .col-lg-3 {
+        width: calc(100% * 3 / 12);
+        flex-direction: column;
+    }
+
+    .col-lg-4 {
+        width: calc(100% * 4 / 12);
+    }
+
+    .col-lg-5 {
+        width: calc(100% * 5 / 12);
+
+    }
+
+    .col-lg-6 {
+        width: calc(100% * 6 / 12);
+
+    }
+
+    .col-lg-7 {
+        width: calc(100% * 7 /12);
+
+    }
+
+    .col-lg-8 {
+        width: calc(100% * 8 / 12);
+
+    }
+
+    .col-lg-9 {
+        width: calc(100% * 9 / 12);
+    }
+
+    .col-lg-10 {
+        width: calc(100% * 10 / 12);
+    }
+
+    .col-lg-11 {
+        width: calc (100px * 11 / 12);
+    }
+
+    .col-lg-12 {
+        width: calc(100% * 12 /12);
+    }
+}
+
+/*FHD 桌上型 縮寫xL*/
+@media screen and (min-width:1200px) {
+    .container {
+        width: 1140px;
+    }
+
+    .col-xl-1 {
+        width: calc(100px * 1 / 12);
+
+    }
+
+    .col-xl-2 {
+        width: calc(100% * 2 / 12);
+    }
+
+    .col-xl-3 {
+        width: calc(100% * 3 / 12);
+        flex-direction: column;
+    }
+
+    .col-xl-4 {
+        width: calc(100% * 4 / 12);
+    }
+
+    .col-xl-5 {
+        width: calc(100% * 5 / 12);
+
+    }
+
+    .col-xl-6 {
+        width: calc(100% * 6 / 12);
+
+    }
+
+    .col-xl-7 {
+        width: calc(100% * 7 /12);
+
+    }
+
+    .col-xl-8 {
+        width: calc(100% * 8 / 12);
+
+    }
+
+    .col-xl-9 {
+        width: calc(100% * 9 / 12);
+    }
+
+    .col-xl-10 {
+        width: calc(100% * 10 / 12);
+    }
+
+    .col-xl-11 {
+        width: calc (100px * 11 / 12);
+    }
+
+    .col-xl-12 {
+        width: calc(100% * 12 /12);
+    }
+}

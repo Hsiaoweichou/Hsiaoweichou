@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+}
+
+.justify-content: center;
+.align-items    : center;
+
+html,
+menu body {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(43, 105, 168) url("./images/mainbg.jpg") no-repeat fixed center;
+}
+
+* {
+    margin    : 0;
+    padding   : 0;
+    list-style: none;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+.displaynone {
+    display: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+header {
+    height          : 90px;
+    background-color: rgb(43, 105, 168);
+    position        : fixed;
+    width           : 100%;
+    display         : flex;
+    flex-direction  : row-reverse;
+    z-index         : 9998;
+}
+
+
+.logo {
+    margin         : 0 auto;
+    padding        : 0;
+    width          : 100%;
+    position       : fixed;
+    display        : flex;
+    justify-content: center;
+    z-index        : 9999;
+}
+
+.menu {
+    color       : white;
+    font-weight : bold;
+    margin-top  : 50px;
+    margin-right: 10px;
+    width       : 70px;
+    height      : 50px;
+    z-index     : 1;
+}
+
+/*輪播CSS 區塊*/
+.anime {
+    margin       : 0 auto;
+    margin-top   : 34%;
+    margin-bottom: 30%;
+    width        : 100%;
+    height       : 100%;
+    display      : flex;
+    align-items  : center;
+
+}
+
+
+.anime a {
+    width            : 100%;
+    display          : block;
+    position         : absolute;
+    opacity          : 0;
+    filter           : alpha(opacity=0);
+    /*動畫全長時間設定*/
+    -webkit-animation: slider 20s linear infinite;
+    animation        : slider 20s linear infinite;
+}
+
+/*動畫關鍵影格, slider動畫名字*/
+@-webkit-keyframes slider {
+    2.5% {
+        opacity: 1;
+        filter : alpha(opacity=100);
+    }
+
+    17.5% {
+        opacity: 1;
+        filter : alpha(opacity=100);
+    }
+
+    20% {
+        opacity: 0;
+        filter : alpha(opacity=0);
+    }
+}
+
+@keyframes slider {
+    2.5% {
+        opacity: 1;
+        filter : alpha(opacity=100);
+    }
+
+    17.5% {
+        opacity: 1;
+        filter : alpha(opacity=100);
+    }
+
+    20% {
+        opacity: 0;
+        filter : alpha(opacity=0);
+    }
+}
+
+/*每個圖片相隔4秒*/
+.anime a:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay        : 0s;
+}
+
+.anime a:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    animation-delay        : 4s;
+}
+
+.anime a:nth-child(3) {
+    -webkit-animation-delay: 8s;
+    animation-delay        : 8s;
+}
+
+.anime a:nth-child(4) {
+    -webkit-animation-delay: 12s;
+    animation-delay        : 12s;
+}
+
+.anime a:nth-child(5) {
+    -webkit-animation-delay: 16s;
+    animation-delay        : 16s;
+}
+
+/*當滑鼠移動到圖片的區塊時，動畫暫停*/
+.anime a:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state        : paused;
+}
+
+
+.titletext {
+    color          : white;
+    text-align     : center;
+    justify-content: center;
+    align-items    : center;
+}
+
+.btn {
+    width           : 100%;
+    margin          : 2px;
+    padding         : 35px;
+    border          : 0.5px solid white;
+    border-radius   : 10px;
+    background-color: rgb(49, 161, 211);
+    z-index         : -2;
+}
+
+.text {
+    width     : 90%;
+    margin    : 10px;
+    padding   : 10px;
+    z-index   : -2;
+    text-align: left;
+
+}
+
+
+
+
+.footer {
+    width           : 100%;
+    height          : 35px;
+    color           : white;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: rgb(43, 105, 168);
+}
+
+
+header label {
+    float        : right;
+    margin-top   : 35px;
+    margin-right : 10px;
+    width        : 50px;
+    height       : 50px;
+    border-radius: 10px;
+    border       : 1px solid white;
+    font-size    : 0;
+    transition   : 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+header label span {
+    display      : block;
+    width        : 40px;
+    height       : 0;
+    margin       : auto;
+    transform    : rotate(0deg);
+    margin-top   : 23px;
+    border-bottom: 5px solid #ccc;
+    position     : relative;
+    border-right : 0px solid #ccc;
+    transition   : 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+span::before {
+    position     : absolute;
+    width        : 100%;
+    content      : '';
+    /* display   : block; */
+    border-bottom: 5px solid #ccc;
+    bottom       : 8px;
+    left         : 0;
+    transition   : 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+span::after {
+    position     : absolute;
+    width        : 100%;
+    content      : '';
+    /* display   : block; */
+    border-bottom: 5px solid #ccc;
+    top          : 13px;
+    right        : 0;
+    transition   : 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#input_nav:checked+label span {
+    width        : 20px;
+    height       : 20px;
+    margin-top   : 5px;
+    transform    : rotate(45deg);
+    border-bottom: 5px solid white;
+    border-right : 5px solid white;
+    border-radius: 3px;
+}
+
+#input_nav:checked+label span::before {
+    bottom       : 11px;
+    left         : 20px;
+    transform    : rotate(30deg);
+    border-radius: 3px;
+    border-bottom: 5px solid white;
+}
+
+#input_nav:checked+label span::after {
+    top          : 28px;
+    right        : 3px;
+    border-radius: 3px;
+    transform    : rotate(60deg);
+    border-bottom: 5px solid white;
+}
+
+#input_nav:checked~nav {
+    display: block;
+}
+
+#input_nav:checked+label {
+    border-radius: 25px;
+    border       : 1px dotted white;
+}
+
+nav {
+    position  : absolute;
+    left      : 100%;
+    top       : 90px;
+    width     : 100%;
+    transition: 0.5s;
+}
+
+#input_nav:checked~nav {
+    left: 0%;
+}
+
+#input_nav:checked~nav ul li {
+    left: 0;
+}
+
+header ul li a {
+    display         : block;
+    text-decoration : none;
+    height          : 45px;
+    width           : 100%;
+    font-size       : 30px;
+    border-bottom   : 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding         : 10px 0;
+    color           : rgb(43, 105, 168);
+    position        : absolute;
+    top             : 0px;
+}
+
+header ul li {
+    text-align: center;
+    margin    : auto;
+    position  : absolute;
+    width     : 100%;
+    transition: 0.5s;
+}
+
+header ul li:nth-child(1) {
+    margin-top: 0;
+}
+
+header ul li:nth-child(2) {
+    margin-top: 0;
+    left      : 50px;
+    top       : 51px;
+}
+
+header ul li:nth-child(3) {
+    margin-top: 0;
+    left      : 100px;
+    top       : 102px;
+}
+
+header ul li:nth-child(4) {
+    margin-top: 0;
+    left      : 150px;
+    top       : 153px;
+}
+
+
+.row {
+    margin         : auto;
+    width          : 90%;
+    display        : flex;
+    color          : #FFFFFF;
+    flex-flow      : row wrap;
+    justify-content: center;
+}
+
+
+.container {
+    width: 960px;
+}
+
+.container-fluid {
+    width: 100px;
+}
